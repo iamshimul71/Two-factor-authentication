@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="text-value-pin" class="form-control" type="text">
+                    <button id="pin" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="calvalue" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div id="seven" class="button">7</div>
+                              <div id="eight" class="button">8</div>
+                              <div id="nine" class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="four" class="button">4</div>
+                              <div id="five" class="button">5</div>
+                              <div id="six" class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="one" class="button">1</div>
+                              <div id="two" class="button">2</div>
+                              <div id="three" class="button">3</divid=class=>
+                            </div>
+                            <div class="calc-button-row">
+                                <div id="oneelement"  class="button"><</div>
+                                <div id="zero" class="button">0</div>
+                                <div id="hideelement" class="button">C</div>
+                            </div>
+                            <div>
+                                <button id="sub" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p id ="not-success" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id ="success"class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+    <!-- Start javascript code  -->
+    <script>
+
+               const notSuccess = document.getElementById('not-success');
+               notSuccess.style.display="none"
+               const suc = document.getElementById('success');
+               suc.style.display="none"
+
+            // This section pin Generate section
+       const getPinBtn = document.getElementById('pin');
+        const inputPin = getPinBtn.addEventListener('click',function(){
+            
+            const pingenarate = document.getElementById('text-value-pin').value;
+            
+            const finalresult = Math.floor(1000 + Math.random() * 9000);
+           const pinresult =  document.getElementById('text-value-pin').value=finalresult;
+            
+            check(pinresult)
+                  
+        
+        
+            
+        })
+        // End pin Generate section
+         
+ 
+      //seven
+        const getseven = document.getElementById('seven');
+        const clickseven = getseven.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'7';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+       //eight 
+       const geteight = document.getElementById('eight');
+        const clickeight = geteight.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'8';
+            const result = parseInt(getclavalue)
+           //cheek(result);
+        })
+         //nine
+        const getnine = document.getElementById('nine');
+        const clicknine = getnine.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'9';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+        //four
+        const getfour = document.getElementById('four');
+        const clickfour = getfour.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'4';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+        //five
+        const getfive = document.getElementById('five');
+        const clickfive = getfive.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'5';
+            const result = parseInt(getclavalue)
+            ///cheek(result);
+        })
+        //one
+
+        const getsix = document.getElementById('six');
+        const clicksix =getsix.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'6';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+        //one
+        const getone = document.getElementById('one');
+        const clickone = getone.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'1';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+        //two
+        const gettwo = document.getElementById('two');
+        const clicktwo = gettwo.addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'2';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+        //three
+
+        const getthree = document.getElementById('three');
+        const clickthree = getthree .addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'3';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+         //zero
+
+        const getzero = document.getElementById('zero');
+        const clickzero = getzero .addEventListener('click',function(){
+            const getclavalue = document.getElementById('calvalue').value=document.getElementById('calvalue').value+'0';
+            const result = parseInt(getclavalue)
+            //cheek(result);
+        })
+
+       const hide = document.getElementById('hideelement');
+        const all = hide.addEventListener('click',function(){
+            
+         document.getElementById('calvalue').value="";
+            
+           
+           
+        })
+        const hideone = document.getElementById('oneelement');
+        const onebtnhide = hideone.addEventListener('click',function(){
+
+          const ck =  document.getElementById('calvalue').value;
+          const final = ck.slice(0,-1);
+          document.getElementById('calvalue').value=final;
+        
+       
+        
+        })
+        
+
+         
+              function check(item)
+              {
+                const getsunmit = document.getElementById('sub');
+              const ite = getsunmit.addEventListener('click',function(){
+              const res =   document.getElementById('calvalue').value;
+              const result = parseInt(res);
+            
+                if(item==result)
+                  {
+                    const suc = document.getElementById('success');
+                      suc.style.display="block";
+                      const notSuccess = document.getElementById('not-success');
+                      notSuccess.style.display="none"
+                  }
+              
+              else{
+                const notSuccess = document.getElementById('not-success');
+               notSuccess.style.display="block"
+               const suc = document.getElementById('success');
+                      suc.style.display="none";
+              }
+
+              
+    
+           
+              })  
+              }
+              
+
+                
+          
+        
+        //check submit btn 
+        
+
+    
+    
+
+          
+     
+       
+        
+    </script>
+    <footer>Copyright © 2020 SHIMUL . All Rights Reserved</footer>
+</body>
+</html>
